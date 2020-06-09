@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi mệnh giá tiền tệ</title>
+</head>
+<body>
+<form>
+    <h3>Amount</h3>
+    <input type="text" id="mon" placeholder="Amount to convert">
+    <h3>From Currency</h3>
+    <select id="from">
+        <option value="1">USD</option>
+        <option value="23000">VND</option>
+    </select>
+    <h3>To Currency</h3>
+    <select id="to">
+        <option value="1">USD</option>
+        <option value="23000">VND</option>
+    </select>
+    <input type="button" onclick="CD();" value="Chuyen Doi">
+    <input id="rs" type="text" placeholder="Kết quả">
+    <script>
+        function CD() {
+            let Money = Number(document.getElementById('mon').value);
+            let From = Number(document.getElementById('from').value);
+            let To = Number(document.getElementById('to').value);
+            let Result = Money * To / From;
+            document.getElementById('rs').value = Result.toFixed(5);
+        }
+    </script>
+</form>
+</body>
+</html>
