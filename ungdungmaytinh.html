@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tính cơ bản</title>
+</head>
+<body>
+<form>
+    <input id="a" type="text" placeholder="Số Thứ 1"><br>
+    <input id="b" type="text" PLACEHOLDER="Số Thứ 2"><br>
+    <input id="result" type="text" placeholder="Kết Quả">
+    <input type="button" value="+" onclick="sum();">
+    <input type="button" value="-" onclick="sub();">
+    <input type="button" value="*" onclick="multi();">
+    <input type="button" value="/" onclick="div();">
+    <script>
+        function sum() {
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            let summation = (a + b);
+            document.getElementById('result').value = summation;
+        }
+        function sub() {
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            let subtraction = (a - b);
+            document.getElementById('result').value = subtraction;
+        }
+        function multi() {
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            let multiplication = (a * b);
+            document.getElementById('result').value = multiplication;
+        }
+        function div() {
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            let division = ( a / b );
+            document.getElementById('result').value= division;
+        }
+    </script>
+</form>
+</body>
+</html>
